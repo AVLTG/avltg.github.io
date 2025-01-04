@@ -10,10 +10,7 @@ export default function App({ Component, pageProps }: AppProps & { Component: Re
         <>
             <Head>
                 <title>AVLTG</title>
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap"
-                    rel="stylesheet"
-                />
+                <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pirata+One&display=swap" rel="stylesheet"></link>
             </Head>
             <ThemeProvider>
                 <main>

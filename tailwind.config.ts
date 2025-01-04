@@ -11,9 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        purple: "var(--purple)",
+        green: "var(--green)",
+        cream: "var(--cream)",
       },
       fontFamily: {
-
+        // libreCaslon: ["Libre Caslon Text", "serif"],
       },
     },
   },

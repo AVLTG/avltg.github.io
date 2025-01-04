@@ -3,13 +3,13 @@ import ThemeButton from "./ThemeChanger";
 
 export function Header() {
     return (
-        <header className="bg-gray-800 text-white p-4 flex justify-between items-center">
-            <div className="pirataOne text-2xl">AVLTG</div>
+        <header className="px-56 pt-10 pb-1 flex justify-between items-center">
+            <a className="pirataOne text-2xl" href="#">AVLTG</a>
             <nav>
-                <ul>
-                    <li className="">About</li>
-                    <li className="">Projects</li>
-                    <li className="">Contact</li>
+                <ul className="">
+                    <li className=""><a href="#about">About</a></li>
+                    <li className=""><a href="#projects">Projects</a></li>
+                    <li className=""><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <ThemeButton />
@@ -19,7 +19,7 @@ export function Header() {
 
 export function Footer() {
     return (
-        <footer className="bg-gray-800 text-white p-4">
+        <footer className="px-24 flex">
         <div className="mx-auto">
             <p>&copy; 2025</p>
         </div>

@@ -3,13 +3,18 @@
 @tailwind utilities;
 
 
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pirata+One&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #0e0e0e;
+  --background: #ebe7dc;
+  --foreground: #1a1514;
+  --purple: #420473;
+  --green: #07f49e;
+  --cream: #e9e8e5;
 }
 
 [data-theme='dark'] {
-  --background: #0e0e0e;
+  --background: #111111;
   --foreground: #ededed;
 }
 
@@ -17,15 +22,43 @@
   font-family: 'Pirata One', serif;
 }
 
+.libreCaslon {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 400;
+}
+
+.libreCaslonBold {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 700;
+}
+
+.notoSans {
+  font-family: 'Noto Sans', sans-serif;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
 }
 
+section {
+  @apply flex flex-col mx-48;
+}
+
 h1 {
-  @apply text-4xl font-bold;
+  @apply text-8xl font-bold;
+}
+h2 {
+  @apply text-2xl font-bold;
 }
 
 ul {
-  @apply flex gap-4;
+  @apply flex gap-10;
+}
+li {
+  @apply notoSans font-bold;
+}
+
+img {
+  @apply h-full object-cover object-bottom;
 }

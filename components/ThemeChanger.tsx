@@ -1,18 +1,14 @@
 import { useTheme } from "next-themes";
-import { FaLightbulb, FaRegLightbulb } from "react-icons/fa";
+import { FaSun } from "react-icons/fa";
 
 const ThemeButton = () => {
     const { theme, setTheme } = useTheme();
     return (
         <button
-            className="text-2xl"
+            className="text-3xl"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-            { theme === 'dark' ? (
-                <FaLightbulb />
-            ) : (
-                <FaRegLightbulb />
-            )}
+            <FaSun />
         </button>
     )
 }
