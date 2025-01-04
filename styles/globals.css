@@ -42,14 +42,21 @@ body {
 }
 
 section {
-  @apply flex flex-col mx-48;
+  @apply flex flex-col mx-56 mb-24;
 }
 
 h1 {
   @apply text-8xl font-bold;
 }
 h2 {
-  @apply text-2xl font-bold;
+  @apply text-6xl mb-6 font-bold libreCaslonBold text-center;
+}
+h3 {
+  @apply text-4xl font-bold;
+}
+
+p {
+  @apply text-xl notoSans;
 }
 
 ul {

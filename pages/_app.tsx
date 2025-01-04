@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import ThemeProvider from "@/components/ThemeProvider";
-import { Header, Footer } from "@/components/nav";
+import { Header, Footer } from "@/components/Navigation";
 
 
 export default function App({ Component, pageProps }: AppProps & { Component: React.ComponentType }) {
