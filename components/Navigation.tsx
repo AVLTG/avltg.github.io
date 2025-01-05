@@ -30,9 +30,10 @@ export function Header() {
 
 export function Footer() {
     return (
-        <footer className="px-24 flex">
-        <div className="mx-auto">
-            <p>&copy; 2025</p>
+        <footer className="px-24 py-4 flex">
+        <div className="mx-auto text-center">
+            <p className="libreCaslon text-sm">&copy; 2025 Amirali Tolooei</p>
+            <p className="text-xs">Created using React and with the help of <a href="https://madelahn.com" target="_blank" className="text-purple">madelahn</a>.</p>
         </div>
         </footer>
     );
@@ -63,8 +64,12 @@ export function BackToTop() {
     }, []);
 
     return (
-        <div className={`fixed bottom-16 right-16 border border-foreground rounded-full p-1 transition-opacity duration-300 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <a href="#" className="text-4xl" onClick={handleClick}><FaAngleUp /></a>
+        <div
+            className={`fixed bottom-16 right-16 border border-foreground rounded-full p-1 transition-opacity duration-300 ease-out hover:border-purple ${
+                isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+            }`}
+        >
+            <a className="text-4xl hover:cursor-pointer" onClick={handleClick}><FaAngleUp /></a>
         </div>
     );
 }

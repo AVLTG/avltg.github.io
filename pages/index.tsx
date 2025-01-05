@@ -36,7 +36,8 @@ export default function Website() {
 
       <section id="contact">
         <h2>Contact</h2>
-        <ul className="text-6xl">
+        <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <ul className="text-4xl mt-8 flex justify-center">
           <li><a href="https://www.github.com/avltg" target="_blank"><FaGithub /></a></li>
           <li><a href="https://www.linkedin.com/in/amirali-tolooei" target="_blank"><FaLinkedin /></a></li>
           <li><a href="mailto:aa.tolooei@gmail.com"><FaEnvelope /></a></li>
