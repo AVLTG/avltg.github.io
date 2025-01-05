@@ -10,10 +10,10 @@ export function Header() {
     };
 
     return (
-        <header className="px-56 pt-10 pb-1 flex justify-between items-center">
+        <header className="px-8 lg:px-56 pt-10 pb-1 flex justify-between items-center">
             <a className="pirataOne text-2xl" href="#">AVLTG</a>
             <nav>
-                <ul className="flex space-x-4">
+                <ul className="flex md:space-x-4 text-sm lg:text-lg">
                     {['about', 'projects', 'contact'].map((section) => (
                         <li key={section}>
                             <a href={`#${section}`} onClick={(e) => handleNavClick(e, section)}>
@@ -30,7 +30,7 @@ export function Header() {
 
 export function Footer() {
     return (
-        <footer className="px-24 py-4 flex">
+        <footer className="md:px-24 pt-4 pb-20 md:pb-8 flex">
         <div className="mx-auto text-center">
             <p className="libreCaslon text-sm">&copy; 2025 Amirali Tolooei</p>
             <p className="text-xs">Created using React and with the help of <a href="https://madelahn.com" target="_blank" className="text-purple">madelahn</a>.</p>
@@ -65,11 +65,11 @@ export function BackToTop() {
 
     return (
         <div
-            className={`fixed bottom-16 right-16 border border-foreground rounded-full p-1 transition-opacity duration-300 ease-out hover:border-purple ${
+            className={`fixed bottom-8 right-10 lg:bottom-16 lg:right-16 border border-foreground rounded-full p-1 transition-opacity duration-300 ease-out hover:border-purple ${
                 isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
             }`}
         >
-            <a className="text-4xl hover:cursor-pointer" onClick={handleClick}><FaAngleUp /></a>
+            <a className="text-2xl md:text-4xl hover:cursor-pointer" onClick={handleClick}><FaAngleUp /></a>
         </div>
     );
 }

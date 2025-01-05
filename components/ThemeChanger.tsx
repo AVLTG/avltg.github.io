@@ -5,7 +5,7 @@ const ThemeButton = () => {
     const { theme, setTheme } = useTheme();
     return (
         <button
-            className="text-3xl"
+            className="text-2xl lg:text-3xl"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
             <FaSun />
