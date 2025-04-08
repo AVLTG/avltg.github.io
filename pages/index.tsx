@@ -17,8 +17,8 @@ export default function Website() {
       <section id="about">
         <h2>About Me</h2>
         <div className="flex flex-col md:flex-row gap-4 md:gap-12">
-          <p className="flex-1 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <p className="flex-1 text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p className="flex-1 text-justify">My name is Amirali Tolooei, a computer science major and statistics minor at the University of Toronto! I'm currently in university learning Machine Learning, Game Dev, Human Computer Interactions, and computer vision. Outside of school, I'm interested in many things such as Magic The Gathering, video games, playing guitar, and going to the gym.</p>
+          <p className="flex-1 text-justify">I've been a huge video game player since I was a kid, and that was really ignited my passion for computer science to begin with. I wanted to be able to develop games that people could enjoy the way I enjoyed the ones I played. However, after taking just one class on it I also developed a huge passion for AI and ML. It fascinated me learning all the ins and outs of different techniques and different applications especially when tied to game solving algorithms or agents. For this reason, I ended up doing a trifecta focus in AI, Computer Vision, and Game Development, and am currently looking to develop a career path in the same areas!</p>
         </div>
       </section>
 
