@@ -1,4 +1,7 @@
 import { FaDownload } from "react-icons/fa";
+import dynamic from "next/dynamic";
+
+const PdfViewer = dynamic(() => import("../components/PdfViewer"), { ssr: false });
 
 export default function Resume() {
     return (
@@ -14,13 +17,7 @@ export default function Resume() {
                     <span className="hidden md:inline">Download</span>
                 </a>
             </div>
-            <div className="border border-foreground rounded-3xl overflow-hidden w-full" style={{ height: "80vh" }}>
-                <iframe
-                    src="/resume.pdf"
-                    className="w-full h-full"
-                    title="Resume"
-                />
-            </div>
+            <PdfViewer file="/resume.pdf" />
         </section>
     );
 }
