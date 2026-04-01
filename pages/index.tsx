@@ -30,7 +30,7 @@ export default function Website() {
             company="Cypress"
             role="Full-Stack Developer & DevOps Engineer"
             period="Jan 2026 — Present"
-            summary="Sole developer building an MVP fleet finance platform from the ground up for a startup in the automotive remarketing space. Responsible for the full stack — backend architecture, frontend implementation, cloud infrastructure, and CI/CD."
+            summary="Led full-stack development of an MVP fleet finance platform from the ground up for a startup in the automotive remarketing space, working alongside a senior developer and designer. Responsible for backend architecture, frontend implementation, cloud infrastructure, and CI/CD."
             highlights={[
               "Designed and built a Django REST Framework API with JWT authentication, 3-tier role-based access control, invitation-based onboarding, and a configurable pricing policy engine integrating Cox Automotive's MMR API",
               "Built a React 18 + TypeScript SPA with shadcn/ui, implementing a Figma-to-code design system with role-conditional dashboards, data tables, and a multi-step signup wizard",
