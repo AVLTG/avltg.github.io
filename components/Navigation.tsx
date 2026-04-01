@@ -1,32 +1,76 @@
 import ThemeButton from "./ThemeChanger";
-import { FaAngleUp } from "react-icons/fa";
+import { FaAngleUp, FaBars, FaTimes } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 export function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const router = useRouter();
+    const isHome = router.pathname === "/";
+
     const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
         e.preventDefault();
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        setMenuOpen(false);
+        if (isHome) {
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            router.push(`/#${id}`);
+        }
     };
 
+    const sections = ['about', 'experience', 'projects', 'contact'];
+
     return (
-        <header className="px-8 lg:px-56 pt-10 pb-1 flex justify-between items-center">
-            <a className="pirataOne text-2xl" href="#">AVLTG</a>
-            <nav>
+        <header className="px-8 lg:px-56 pt-10 pb-1 flex justify-between items-center relative">
+            <Link href="/" className="pirataOne text-2xl">AVLTG</Link>
+
+            {/* Desktop nav */}
+            <nav className="hidden md:block">
                 <ul className="flex md:space-x-4 text-sm lg:text-lg">
-                    {['about', 'experience', 'projects', 'contact'].map((section) => (
+                    {sections.map((section) => (
                         <li key={section}>
-                            <a href={`#${section}`} onClick={(e) => handleNavClick(e, section)}>
+                            <a href={`/#${section}`} onClick={(e) => handleNavClick(e, section)}>
                                 {section.charAt(0).toUpperCase() + section.slice(1)}
                             </a>
                         </li>
                     ))}
                     <li>
-                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <Link href="/resume">Resume</Link>
                     </li>
                 </ul>
             </nav>
-            <ThemeButton />
+
+            <div className="flex items-center gap-4">
+                <ThemeButton />
+                {/* Hamburger button - mobile only */}
+                <button
+                    className="md:hidden text-2xl"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    aria-label="Toggle menu"
+                >
+                    {menuOpen ? <FaTimes /> : <FaBars />}
+                </button>
+            </div>
+
+            {/* Mobile dropdown */}
+            {menuOpen && (
+                <nav className="absolute top-full right-4 mt-2 border border-foreground rounded-2xl bg-background p-4 z-50 md:hidden">
+                    <ul className="flex-col gap-3">
+                        {sections.map((section) => (
+                            <li key={section}>
+                                <a href={`/#${section}`} onClick={(e) => handleNavClick(e, section)}>
+                                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                                </a>
+                            </li>
+                        ))}
+                        <li>
+                            <Link href="/resume" onClick={() => setMenuOpen(false)}>Resume</Link>
+                        </li>
+                    </ul>
+                </nav>
+            )}
         </header>
     );
 }
