@@ -58,7 +58,7 @@ export default function Website() {
 
       <section id="projects">
         <h2>Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div className="flex flex-wrap justify-center gap-4 [&>*]:w-full [&>*]:md:w-[calc(50%-0.5rem)] [&>*]:xl:w-[calc(33.333%-0.667rem)]">
           <Project name="Friend Library" description="A book-sharing platform for friend groups to browse shared bookshelves, track ownership, leave ratings and reviews, and discover what each other are reading. Features a visual 3D bookshelf display, Google Books integration, and an invite-based access system." image="/images/friendLibrary.png" link="https://github.com/avltg/friend-library" />
           <Project name="Size Matters" description="A single-player puzzle experience, where players are challenged to cross a series of rooms by completing puzzles that can only be solved using the Swap Mechanic." image="/images/sizeMatters.png" link="https://gump0.itch.io/size-matters" />
           <Project name="Magic Scraper" description="A deck-building companion for Magic: The Gathering players that searches friends' Moxfield collections and local game store inventories. Paste a decklist to instantly find which cards your friends own and compare prices across stores." image="/images/magicScraper.png" link="https://github.com/avltg/magic-scraper" />
