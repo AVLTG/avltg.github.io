@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Project from "../components/Project";
+import Experience from "../components/Experience";
 
 export default function Website() {
   return (
@@ -22,14 +23,49 @@ export default function Website() {
         </div>
       </section>
 
+      <section id="experience">
+        <h2>Experience</h2>
+        <div className="flex flex-col gap-6">
+          <Experience
+            company="Cypress"
+            role="Full-Stack Developer & DevOps Engineer"
+            period="Jan 2026 — Present"
+            summary="Sole developer building an MVP fleet finance platform from the ground up for a startup in the automotive remarketing space. Responsible for the full stack — backend architecture, frontend implementation, cloud infrastructure, and CI/CD."
+            highlights={[
+              "Designed and built a Django REST Framework API with JWT authentication, 3-tier role-based access control, invitation-based onboarding, and a configurable pricing policy engine integrating Cox Automotive's MMR API",
+              "Built a React 18 + TypeScript SPA with shadcn/ui, implementing a Figma-to-code design system with role-conditional dashboards, data tables, and a multi-step signup wizard",
+              "Provisioned staging infrastructure on GCP — Cloud Run, Cloud SQL (PostgreSQL 16), and Artifact Registry — with multi-stage Docker images and cross-platform support",
+              "Enforced strict code quality with mypy strict mode, ruff linting, AST-based schema validation, and 400+ automated tests",
+              "Helped grow the company from first revenue to over $12M in annualized GMV in its first quarter of trading",
+            ]}
+            technologies={["Python", "Django", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "PostgreSQL", "GCP", "Cloud Run", "Docker"]}
+          />
+          <Experience
+            company="Montagy AI"
+            role="AI Developer"
+            period="May 2025 — Oct 2025"
+            location="Vancouver, BC"
+            summary="Contributed to a voice cloning and text-to-speech platform focused on generating personalized speech synthesis from user voice recordings, with multilingual capabilities and emotion blending."
+            highlights={[
+              "Deployed a zero-shot TTS system using a diffusion transformer model in a Python Flask application that records user voices and generates personalized speech synthesis",
+              "Optimized production model pipelines with FastAPI, implementing server-level caching strategies to achieve 98% uptime and reduce latency by 40%",
+              "Containerized applications with Docker and established CI/CD pipelines with GitHub Actions, automating testing, linting, and deployment workflows",
+            ]}
+            technologies={["Python", "Flask", "FastAPI", "SQLite", "ChromaDB", "AWS", "Docker", "GitHub Actions"]}
+          />
+        </div>
+      </section>
+
       <section id="projects">
         <h2>Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-          <Project name="Size Matters" description="A single-player puzzle experience, where players are challenged to cross a series of rooms by completing puzzles That can only be solved using the Swap Mechanic." image="/images/sizeMatters.png" link="https://gump0.itch.io/size-matters" />
-          <Project name="Voxify" description="Montagy aims to be a platform for Voice Cloning and Text-to-Speech (TTS) synthesis. The voxify project is focused on creating a user-friendly interface for users to upload their voice samples and generate synthetic speech with multilingual capabilities, emotion blending, and TTS streamed voices of LLM outputs. (Unfortunately not public)." image="/images/voxify_design.png" link="https://www.github.com/avltg" />
+          <Project name="Friend Library" description="A book-sharing platform for friend groups to browse shared bookshelves, track ownership, leave ratings and reviews, and discover what each other are reading. Features a visual 3D bookshelf display, Google Books integration, and an invite-based access system." image="/images/friendLibrary.png" link="https://github.com/avltg/friend-library" />
+          <Project name="Size Matters" description="A single-player puzzle experience, where players are challenged to cross a series of rooms by completing puzzles that can only be solved using the Swap Mechanic." image="/images/sizeMatters.png" link="https://gump0.itch.io/size-matters" />
+          <Project name="Magic Scraper" description="A deck-building companion for Magic: The Gathering players that searches friends' Moxfield collections and local game store inventories. Paste a decklist to instantly find which cards your friends own and compare prices across stores." image="/images/magicScraper.png" link="https://github.com/avltg/magic-scraper" />
           <Project name="Connuki" description="Connuki is a chrome extension that helps users' change their YouTube recommendation algorithm, helping them see more shorts and videos they want to see, and suppress content that they want to avoid." image="/images/connuki.jpg" link="https://devpost.com/software/contentnuke" />
-          <Project name="U-Net Image Segmentation for Multi-MNIST" description="An implementation of the U-Net architecture for segmenting overlapping MNIST digits into 11 distinct classes, with a focus on analyzing the impact of skip connections on segmentation accuracy." image="/images/Unet.png" link="https://colab.research.google.com/drive/1lOd01zhpsz5L795FKP-ZL03TexQDWAhD?usp=sharingD" />
-          <Project name="MathBERT Fine-Tuning for Verbal Arithmetic" description="A fine-tuning experiment using MathBERT and BERTweet on a verbal arithmetic classification task, comparing model performance with and without pretrained weights on mathematical expressions." image="/images/Bert.png" link="https://colab.research.google.com/drive/1fFks3sL0sasPM6VV7fbjOK9ABdlKjFyt?usp=sharing" />
+          <Project name="FinTrack" description="A personal finance dashboard that automatically ingests bank statement PDFs, tracks balances across multiple accounts, and calculates net worth over time with interactive charts, income allocation breakdowns, and detailed Excel exports." image="/images/fintrack.png" link="https://www.github.com/avltg" />
+          <Project name="U-Net Image Segmentation" description="An implementation of the U-Net architecture for segmenting overlapping MNIST digits into 11 distinct classes, with a focus on analyzing the impact of skip connections on segmentation accuracy." image="/images/Unet.png" link="https://colab.research.google.com/drive/1lOd01zhpsz5L795FKP-ZL03TexQDWAhD?usp=sharingD" />
+          <Project name="MathBERT Fine-Tuning" description="A fine-tuning experiment using MathBERT and BERTweet on a verbal arithmetic classification task, comparing model performance with and without pretrained weights on mathematical expressions." image="/images/Bert.png" link="https://colab.research.google.com/drive/1fFks3sL0sasPM6VV7fbjOK9ABdlKjFyt?usp=sharing" />
           <Project name="PatchMatch" description="An object-oriented implementation of the PatchMatch algorithm using only NumPy, featuring optimized nearest-neighbor field generation, vectorized patch comparisons, and image reconstruction to validate performance. (Not public for Academic Integrity reasons)" image="/images/PatchMatch.png" link="https://www.github.com/avltg" />
         </div>
       </section>

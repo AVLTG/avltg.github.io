@@ -14,7 +14,7 @@ export function Header() {
             <a className="pirataOne text-2xl" href="#">AVLTG</a>
             <nav>
                 <ul className="flex md:space-x-4 text-sm lg:text-lg">
-                    {['about', 'projects', 'contact'].map((section) => (
+                    {['about', 'experience', 'projects', 'contact'].map((section) => (
                         <li key={section}>
                             <a href={`#${section}`} onClick={(e) => handleNavClick(e, section)}>
                                 {section.charAt(0).toUpperCase() + section.slice(1)}
