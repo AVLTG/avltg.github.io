@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 const PROJECTS: ProjectData[] = [
     {
         name: "Friend Library",
-        year: 2025,
+        year: 2026,
         tech: ["React", "Node", "Postgres"],
         description:
             "A book-sharing platform for friend groups to browse shared bookshelves, track ownership, leave ratings and reviews, and discover what each other are reading.",
@@ -15,22 +15,31 @@ const PROJECTS: ProjectData[] = [
         link: "https://github.com/avltg/friend-library",
     },
     {
-        name: "Size Matters",
-        year: 2024,
-        tech: ["Unity", "C#"],
-        description:
-            "A single-player puzzle experience, where players are challenged to cross a series of rooms by completing puzzles that can only be solved using the Swap Mechanic.",
-        image: "/images/sizeMatters.png",
-        link: "https://gump0.itch.io/size-matters",
-    },
-    {
         name: "Magic Scraper",
-        year: 2024,
+        year: 2026,
         tech: ["Python", "FastAPI", "BeautifulSoup"],
         description:
             "A deck-building companion for Magic: The Gathering players that searches friends' Moxfield collections and local game store inventories.",
         image: "/images/magicScraper.png",
         link: "https://github.com/avltg/magic-scraper",
+    },
+    {
+        name: "FinTrack",
+        year: 2026,
+        tech: ["Python", "pdfplumber", "React"],
+        description:
+            "A personal finance dashboard that ingests bank statement PDFs, tracks balances across accounts, and calculates net worth over time.",
+        image: "/images/fintrack.png",
+        link: "https://www.github.com/avltg",
+    },
+    {
+        name: "Size Matters",
+        year: 2025,
+        tech: ["Unity", "C#"],
+        description:
+            "A single-player puzzle experience, where players are challenged to cross a series of rooms by completing puzzles that can only be solved using the Swap Mechanic.",
+        image: "/images/sizeMatters.png",
+        link: "https://gump0.itch.io/size-matters",
     },
     {
         name: "Connuki",
@@ -40,15 +49,6 @@ const PROJECTS: ProjectData[] = [
             "A Chrome extension that helps users change their YouTube recommendation algorithm, seeing more of what they want and suppressing the rest.",
         image: "/images/connuki.jpg",
         link: "https://devpost.com/software/contentnuke",
-    },
-    {
-        name: "FinTrack",
-        year: 2023,
-        tech: ["Python", "pdfplumber", "React"],
-        description:
-            "A personal finance dashboard that ingests bank statement PDFs, tracks balances across accounts, and calculates net worth over time.",
-        image: "/images/fintrack.png",
-        link: "https://www.github.com/avltg",
     },
     {
         name: "U-Net Segmentation",
@@ -62,7 +62,7 @@ const PROJECTS: ProjectData[] = [
     {
         name: "MathBERT Fine-Tuning",
         year: 2023,
-        tech: ["PyTorch", "HuggingFace"],
+        tech: ["PyTorch", "Pandas"],
         description:
             "A fine-tuning experiment using MathBERT and BERTweet on a verbal arithmetic classification task.",
         image: "/images/Bert.png",
@@ -83,7 +83,7 @@ const EXPERIENCES = [
     {
         company: "Cypress",
         role: "Full-Stack Developer & DevOps Engineer",
-        period: "Jan 2026 — Present",
+        period: "Jan 2026 — Apr 2026",
         summary:
             "Led full-stack development of an MVP fleet finance platform from the ground up for a startup in the automotive remarketing space, working alongside a senior developer and designer. Responsible for backend architecture, frontend implementation, cloud infrastructure, and CI/CD.",
         highlights: [
@@ -132,10 +132,10 @@ const EXPERIENCES = [
 ];
 
 const ABOUT_LEDE =
-    "My name is Amirali Tolooei, a computer science major and statistics minor at the University of Toronto. I'm a recent grad who studied a lot of Machine Learning and Human-Computer Interaction while in school. Since graduating, I've been working through Angela Yu's Complete Full-Stack Web Development Bootcamp and Stephane Maarek's AWS Certified Solutions Architect Associate course, hoping to earn the certification soon.";
+    "My name is Amirali Tolooei, a computer science major and statistics minor graduate from the University of Toronto. In school I spent a lot of time learning Machine Learning and Human-Computer Interaction. Since graduating, I've had 2 separate startup contracts while simultaneously working through Udemy courses. I've been working through Angela Yu's Complete Full-Stack Web Development Bootcamp and Stephane Maarek's AWS Certified Solutions Architect Associate course, hoping to earn the certification soon!";
 
 const ABOUT_BODY =
-    "I've been a huge video game nerd since I was a kid, and that's really what ignited my passion for computer science to begin with. During my studies AI hit its huge boom and I ended up making it my focus — doing a concentration in AI and Game Development, and now looking to build a career at that intersection.";
+    "I've been a huge video game nerd since I was a kid, and that's really what ignited my passion for computer science to begin with. During my studies AI hit its huge boom and I ended up making it my focus, doing a concentration in AI and Human-Computer Interaction. Since the Cypress contract wrapped I've kept wandering the stack — building this site, wiring a fine-tuned ML model into a Discord bot, swapping my OS to Linux to learn the plumbing underneath — all of it still aimed at a career at that intersection.";
 
 function Section({
     id,

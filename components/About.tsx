@@ -11,14 +11,15 @@ interface AboutProps {
 }
 
 const DEFAULT_QUOTE =
-    "Video games ignited it. Machine learning focused it. I'm still chasing both.";
+    "Every corner of computer science feels worth the detour.";
 
 const DEFAULT_FACTS: Fact[] = [
     { k: "Based in", v: "Toronto, ON" },
-    { k: "Studying", v: "CS + Stats, UofT" },
-    { k: "Currently", v: "Full-Stack @ Cypress" },
+    { k: "Expertise", v: "Full-Stack · ML · DevOps" },
+    { k: "Currently", v: "Tinkering: SqueeBot · MagicScraper" },
+    { k: "Latest", v: "Full-Stack @ Cypress" },
     { k: "Learning", v: "AWS SAA · Angela Yu FS" },
-    { k: "Off-screen", v: "MTG Commander · Gym · Dexter reruns" },
+    { k: "Off-screen", v: "MTG · Gym · FF Marathon" },
 ];
 
 export default function About({
