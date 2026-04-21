@@ -2,73 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,300..700;1,300..700&family=Cinzel:wght@400..700&display=swap');
 
 :root {
+  /* ---- Core palette ---- */
   --background: #ebe7dc;
   --foreground: #1a1514;
-  --purple: #652299;
-  --cream: #e9e8e5;
+  --purple:     #4a7c59;   /* forest-green accent, applied site-wide per design decision */
+  --green:      #4a7c59;
+  --cream:      #e9e8e5;
+
+  /* ---- Semantic aliases ---- */
+  --bg:       var(--background);
+  --fg:       var(--foreground);
+  --fg-1:     var(--foreground);
+  --fg-2:     rgba(26, 21, 20, 0.70);
+  --fg-3:     rgba(26, 21, 20, 0.40);
+  --fg-4:     rgba(26, 21, 20, 0.15);
+  --accent:   var(--purple);
+  --on-image: var(--cream);
+
+  /* ---- Borders ---- */
+  --border:         var(--foreground);
+  --border-subtle:  rgba(26, 21, 20, 0.15);
+  --border-hover:   var(--purple);
+
+  /* ---- Page gutter ---- */
+  --gutter: 2rem;
+
+  /* ---- Type families ---- */
+  --font-display:  'Libre Caslon Text', Georgia, serif;
+  --font-serif:    'Libre Caslon Text', Georgia, serif;
+  --font-sans:     'Work Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-wordmark: 'Cinzel', 'Libre Caslon Text', serif;
 }
+
+@media (min-width: 768px)  { :root { --gutter: 6rem; } }
+@media (min-width: 1024px) { :root { --gutter: 14rem; } }
 
 [data-theme='dark'] {
   --background: #111111;
   --foreground: #ededed;
+  --fg-1: #ededed;
+  --fg-2: rgba(237, 237, 237, 0.70);
+  --fg-3: rgba(237, 237, 237, 0.40);
+  --fg-4: rgba(237, 237, 237, 0.15);
+  --border: #ededed;
+  --border-subtle: rgba(237, 237, 237, 0.15);
 }
 
-.pirataOne {
-  font-family: 'Pirata One', serif;
-}
+/* ==========================================================================
+   Font utility classes
+   ========================================================================== */
+.cinzel          { font-family: var(--font-wordmark); letter-spacing: 0.08em; }
+.libreCaslon     { font-family: var(--font-serif); font-weight: 400; }
+.libreCaslonBold { font-family: var(--font-serif); font-weight: 700; }
+.libreCaslonIt   { font-family: var(--font-serif); font-weight: 400; font-style: italic; }
+.workSans        { font-family: var(--font-sans); }
 
-.libreCaslon {
-  font-family: 'Libre Caslon Text', serif;
-  font-weight: 400;
-}
-
-.libreCaslonBold {
-  font-family: 'Libre Caslon Text', serif;
-  font-weight: 700;
-}
-
-.notoSans {
-  font-family: 'Noto Sans', sans-serif;
+/* ==========================================================================
+   Base
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
   @apply transition-colors duration-500 ease-in-out;
 }
 
-section {
-  @apply flex flex-col mx-8 md:mx-24 lg:mx-56 mb-12 md:mb-24;
-}
+a { color: inherit; }
 
-h1 {
-  @apply text-4xl lg:text-8xl font-bold;
-}
-h2 {
-  @apply text-4xl lg:text-6xl mb-2 md:mb-6 font-bold libreCaslonBold text-center;
-}
-h3 {
-  @apply text-xl lg:text-4xl font-bold;
-}
-
-p {
-  @apply text-xl notoSans;
-}
 a, button {
   @apply duration-200 hover:text-purple;
 }
 
-ul {
-  @apply flex gap-4 md:gap-10;
-}
-li {
-  @apply notoSans font-bold;
-}
+ul { list-style: none; }
 
-img {
-  @apply h-full object-cover object-bottom;
+img { display: block; max-width: 100%; }
+
+h1 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.25;
 }

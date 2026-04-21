@@ -4,21 +4,23 @@ import Head from "next/head";
 import ThemeProvider from "@/components/ThemeProvider";
 import { Header, Footer, BackToTop } from "@/components/Navigation";
 
-
-export default function App({ Component, pageProps }: AppProps & { Component: React.ComponentType }) {
+export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
-                <title>AVLTG</title>
-                <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pirata+One&display=swap" rel="stylesheet"></link>
+                <title>Amirali Tolooei — Portfolio</title>
+                <meta
+                    name="description"
+                    content="Amirali Tolooei — Software Developer. Computer Science, University of Toronto."
+                />
             </Head>
             <ThemeProvider>
+                <Header />
                 <main>
-                    <Header />
                     <Component {...pageProps} />
-                    <BackToTop />
-                    <Footer />
                 </main>
+                <Footer />
+                <BackToTop />
             </ThemeProvider>
         </>
     );
