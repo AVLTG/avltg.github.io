@@ -132,10 +132,10 @@ const EXPERIENCES = [
 ];
 
 const ABOUT_LEDE =
-    "My name is Amirali Tolooei, a computer science major and statistics minor graduate from the University of Toronto. In school I spent a lot of time learning Machine Learning and Human-Computer Interaction. Since graduating, I've had 2 separate startup contracts while simultaneously working through Udemy courses. I've been working through Angela Yu's Complete Full-Stack Web Development Bootcamp and Stephane Maarek's AWS Certified Solutions Architect Associate course, hoping to earn the certification soon!";
+    "My name is Amirali Tolooei, a computer science major and statistics minor graduate from the University of Toronto. In school I spent a lot of time learning Machine Learning and Human-Computer Interaction. Since graduating, I've worked two startup contracts back to back, and used the gaps between them to chase whatever caught my attention.";
 
 const ABOUT_BODY =
-    "I've been a huge video game nerd since I was a kid, and that's really what ignited my passion for computer science to begin with. During my studies AI hit its huge boom and I ended up making it my focus, doing a concentration in AI and Human-Computer Interaction. Since the Cypress contract wrapped I've kept wandering the stack — building this site, wiring a fine-tuned ML model into a Discord bot, swapping my OS to Linux to learn the plumbing underneath — all of it still aimed at a career at that intersection.";
+    "I've been a huge video game nerd since I was a kid, and that's really what ignited my passion for computer science to begin with. During my studies AI hit its huge boom and I ended up making it my focus, doing a concentration in AI and Human-Computer Interaction. Lately that curiosity has spilled in every direction — built this site, set up a storefront for HobbyKnight (a local game store), trained SqueeBot (a Discord chatbot styled as a Magic: The Gathering character, via QLoRA fine-tuning), and replaced my OS with Linux to dig into how operating systems actually work.";
 
 function Section({
     id,
@@ -181,6 +181,10 @@ export default function Website() {
                 <About lede={ABOUT_LEDE} body={ABOUT_BODY} />
             </Section>
 
+            <Section id="projects" title="Projects">
+                <Projects projects={PROJECTS} />
+            </Section>
+
             <Section id="experience" title="Experience">
                 <div
                     style={{
@@ -193,10 +197,6 @@ export default function Website() {
                         <Experience key={e.company} {...e} />
                     ))}
                 </div>
-            </Section>
-
-            <Section id="projects" title="Projects">
-                <Projects projects={PROJECTS} />
             </Section>
 
             <Section id="contact" title="Contact">

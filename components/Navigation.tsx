@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const SECTIONS = ["about", "experience", "projects", "contact"] as const;
+const SECTIONS = ["about", "projects", "experience", "contact"] as const;
 type SectionId = (typeof SECTIONS)[number];
 
 function useActiveSection(ids: readonly string[], enabled: boolean) {

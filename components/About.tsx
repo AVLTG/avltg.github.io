@@ -18,7 +18,7 @@ const DEFAULT_FACTS: Fact[] = [
     { k: "Expertise", v: "Full-Stack · ML · DevOps" },
     { k: "Currently", v: "Tinkering: SqueeBot · MagicScraper" },
     { k: "Latest", v: "Full-Stack @ Cypress" },
-    { k: "Learning", v: "AWS SAA · Angela Yu FS" },
+    { k: "Learning", v: "How to navigate my Linux desktop" },
     { k: "Off-screen", v: "MTG · Gym · FF Marathon" },
 ];
 
