@@ -135,7 +135,7 @@ const ABOUT_LEDE =
     "My name is Amirali Tolooei, a computer science major and statistics minor graduate from the University of Toronto. In school I spent a lot of time learning Machine Learning and Human-Computer Interaction. Since graduating, I've worked two startup contracts back to back, and used the gaps between them to chase whatever caught my attention.";
 
 const ABOUT_BODY =
-    "I've been a huge video game nerd since I was a kid, and that's really what ignited my passion for computer science to begin with. During my studies AI hit its huge boom and I ended up making it my focus, doing a concentration in AI and Human-Computer Interaction. Lately that curiosity has spilled in every direction — built this site, set up a storefront for HobbyKnight (a local game store), trained SqueeBot (a Discord chatbot styled as a Magic: The Gathering character, via QLoRA fine-tuning), and replaced my OS with Linux to dig into how operating systems actually work.";
+    "I've been a huge video game nerd since I was a kid, and that's really what ignited my passion for computer science to begin with. During my studies AI hit its huge boom and I ended up making it my focus, doing a concentration in AI and Human-Computer Interaction. Lately that curiosity has spilled in every direction: built this site, am working on helping set up a new storefront for HobbyKnight (a local game store), trained SqueeBot (a Discord chatbot styled as a Magic: The Gathering character, via QLoRA fine-tuning), and replaced my OS with Linux to dig into how operating systems actually work.";
 
 function Section({
     id,
