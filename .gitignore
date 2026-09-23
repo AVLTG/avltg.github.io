@@ -41,3 +41,4 @@ yarn-error.log*
 next-env.d.ts
 /.claude
 PROJECT_CONTEXT.md
+/.superpowers
