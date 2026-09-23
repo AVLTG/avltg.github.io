@@ -69,7 +69,7 @@ export default function Hero() {
                         fontStyle: "italic",
                     }}
                 >
-                    Software Developer, Toronto
+                    Full-Stack &amp; AI Developer, Toronto
                 </p>
             </div>
 
@@ -83,9 +83,10 @@ export default function Hero() {
                     color: "var(--fg-2)",
                 }}
             >
-                Computer Science, University of Toronto. Recently shipping a
-                fleet-finance MVP at Cypress. Interested in full-stack, ML, and
-                games — in roughly that order, on a given Tuesday.
+                Computer Science, University of Toronto. Currently building
+                voice agents and LLM evaluation tooling at HouseSigma.
+                Interested in full-stack, ML, and games — in roughly that
+                order, on a given Tuesday.
             </p>
 
             <div

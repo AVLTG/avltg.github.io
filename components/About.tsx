@@ -7,26 +7,17 @@ interface AboutProps {
     lede: string;
     body: string;
     quote?: string;
-    facts?: Fact[];
+    facts: Fact[];
 }
 
 const DEFAULT_QUOTE =
     "Every corner of computer science feels worth the detour.";
 
-const DEFAULT_FACTS: Fact[] = [
-    { k: "Based in", v: "Toronto, ON" },
-    { k: "Expertise", v: "Full-Stack · ML · DevOps" },
-    { k: "Currently", v: "Tinkering: SqueeBot · MagicScraper" },
-    { k: "Latest", v: "Full-Stack @ Cypress" },
-    { k: "Learning", v: "How to navigate my Linux desktop" },
-    { k: "Off-screen", v: "MTG · Gym · FF Marathon" },
-];
-
 export default function About({
     lede,
     body,
     quote = DEFAULT_QUOTE,
-    facts = DEFAULT_FACTS,
+    facts,
 }: AboutProps) {
     return (
         <div className="avltg-about">

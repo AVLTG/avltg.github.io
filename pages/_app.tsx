@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <title>Amirali Tolooei — Portfolio</title>
                 <meta
                     name="description"
-                    content="Amirali Tolooei — Software Developer. Computer Science, University of Toronto."
+                    content="Amirali Tolooei — Full-Stack & AI Developer in Toronto. Computer Science, University of Toronto."
                 />
             </Head>
             <ThemeProvider>
