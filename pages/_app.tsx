@@ -1,4 +1,10 @@
 import "@/styles/globals.css";
+import "@fontsource/libre-caslon-text/400.css";
+import "@fontsource/libre-caslon-text/400-italic.css";
+import "@fontsource/libre-caslon-text/700.css";
+import "@fontsource-variable/work-sans/index.css";
+import "@fontsource-variable/work-sans/wght-italic.css";
+import "@fontsource-variable/cinzel/index.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import ThemeProvider from "@/components/ThemeProvider";
