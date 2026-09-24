@@ -1,5 +1,6 @@
 import { FaDownload } from "react-icons/fa";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const PdfViewer = dynamic(() => import("../components/PdfViewer"), {
     ssr: false,
@@ -15,6 +16,34 @@ export default function Resume() {
                 flexDirection: "column",
             }}
         >
+            <Head>
+                <title key="title">Resume — Amirali Tolooei</title>
+                <meta
+                    key="description"
+                    name="description"
+                    content="Resume of Amirali Tolooei — Full-Stack & AI Developer in Toronto."
+                />
+                <meta
+                    key="og:title"
+                    property="og:title"
+                    content="Resume — Amirali Tolooei"
+                />
+                <meta
+                    key="og:description"
+                    property="og:description"
+                    content="Resume of Amirali Tolooei — Full-Stack & AI Developer in Toronto."
+                />
+                <meta
+                    key="og:url"
+                    property="og:url"
+                    content="https://www.avltg.dev/resume"
+                />
+                <link
+                    key="canonical"
+                    rel="canonical"
+                    href="https://www.avltg.dev/resume"
+                />
+            </Head>
             <div
                 style={{
                     display: "flex",

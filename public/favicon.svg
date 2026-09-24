@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <style>
+        .letter { fill: #1a1514; }
+        @media (prefers-color-scheme: dark) {
+            .letter { fill: #ededed; }
+        }
+    </style>
+    <text class="letter" x="3" y="25" font-family="Georgia, serif" font-size="27">A</text>
+    <circle cx="27" cy="23" r="2.5" fill="#4a7c59" />
+</svg>
