@@ -71,29 +71,10 @@ export default function Resume() {
                 <a
                     href="/resume.pdf"
                     download
-                    className="workSans"
+                    className="workSans pill"
                     style={{
-                        display: "inline-flex",
-                        alignItems: "center",
                         gap: 8,
-                        fontSize: 12,
-                        letterSpacing: "0.18em",
-                        textTransform: "uppercase",
-                        fontWeight: 500,
-                        border: "1px solid var(--fg)",
-                        borderRadius: 9999,
-                        padding: "10px 22px",
-                        color: "var(--fg)",
                         textDecoration: "none",
-                        transition: "color 200ms, border-color 200ms",
-                    }}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.color = "var(--purple)";
-                        e.currentTarget.style.borderColor = "var(--purple)";
-                    }}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.style.color = "var(--fg)";
-                        e.currentTarget.style.borderColor = "var(--fg)";
                     }}
                 >
                     <FaDownload style={{ fontSize: 12 }} />

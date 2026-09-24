@@ -220,30 +220,9 @@ export default function Projects({ projects }: { projects: ProjectData[] }) {
                     <button
                         type="button"
                         onClick={() => setExpanded((e) => !e)}
-                        className="workSans"
+                        className="workSans pill"
                         style={{
-                            background: "none",
-                            cursor: "pointer",
-                            border: "1px solid var(--fg)",
-                            borderRadius: 9999,
-                            padding: "10px 22px",
-                            fontSize: 12,
-                            letterSpacing: "0.18em",
-                            textTransform: "uppercase",
-                            fontWeight: 500,
-                            color: "var(--fg)",
-                            display: "inline-flex",
-                            alignItems: "center",
                             gap: 12,
-                            transition: "color 200ms, border-color 200ms",
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.color = "var(--purple)";
-                            e.currentTarget.style.borderColor = "var(--purple)";
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.color = "var(--fg)";
-                            e.currentTarget.style.borderColor = "var(--fg)";
                         }}
                     >
                         {expanded

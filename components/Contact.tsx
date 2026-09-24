@@ -2,16 +2,10 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
     const linkStyle: React.CSSProperties = {
-        color: "var(--fg)",
         fontSize: 36,
-        transition: "color 200ms",
         textDecoration: "none",
         lineHeight: 0,
     };
-    const hoverOn = (e: React.MouseEvent<HTMLAnchorElement>) =>
-        (e.currentTarget.style.color = "var(--purple)");
-    const hoverOff = (e: React.MouseEvent<HTMLAnchorElement>) =>
-        (e.currentTarget.style.color = "var(--fg)");
 
     return (
         <>
@@ -40,9 +34,8 @@ export default function Contact() {
                         href="https://www.github.com/avltg"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="contact-link"
                         style={linkStyle}
-                        onMouseEnter={hoverOn}
-                        onMouseLeave={hoverOff}
                         aria-label="GitHub"
                     >
                         <FaGithub />
@@ -53,9 +46,8 @@ export default function Contact() {
                         href="https://www.linkedin.com/in/amirali-tolooei"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="contact-link"
                         style={linkStyle}
-                        onMouseEnter={hoverOn}
-                        onMouseLeave={hoverOff}
                         aria-label="LinkedIn"
                     >
                         <FaLinkedin />
@@ -64,9 +56,8 @@ export default function Contact() {
                 <li>
                     <a
                         href="mailto:aa.tolooei@gmail.com"
+                        className="contact-link"
                         style={linkStyle}
-                        onMouseEnter={hoverOn}
-                        onMouseLeave={hoverOff}
                         aria-label="Email"
                     >
                         <FaEnvelope />

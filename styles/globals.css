@@ -111,6 +111,47 @@ a, button {
   transform: translateY(0);
 }
 
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border: 1px solid var(--fg);
+  border-radius: 9999px;
+  color: var(--fg);
+  background: none;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: color 200ms, border-color 200ms;
+  cursor: pointer;
+}
+
+.pill:hover,
+.pill:focus-visible {
+  color: var(--purple);
+  border-color: var(--purple);
+}
+
+.tech-tag {
+  opacity: 0.7;
+  transition: opacity 200ms;
+}
+
+.tech-tag:hover {
+  opacity: 1;
+}
+
+.contact-link {
+  color: var(--fg);
+  transition: color 200ms;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+  color: var(--purple);
+}
+
 ul { list-style: none; }
 
 img { display: block; max-width: 100%; }
