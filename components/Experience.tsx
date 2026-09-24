@@ -83,7 +83,7 @@ export default function Experience({
                 {summary}
             </p>
 
-            <div
+            <ul
                 className="workSans"
                 style={{
                     marginTop: 16,
@@ -93,7 +93,7 @@ export default function Experience({
                 }}
             >
                 {highlights.map((highlight, i) => (
-                    <div
+                    <li
                         key={i}
                         style={{
                             display: "flex",
@@ -106,11 +106,12 @@ export default function Experience({
                             &#8226;
                         </span>
                         <span>{highlight}</span>
-                    </div>
+                    </li>
                 ))}
-            </div>
+            </ul>
 
-            <div
+            <ul
+                aria-label="Technologies"
                 style={{
                     display: "flex",
                     flexWrap: "wrap",
@@ -119,7 +120,7 @@ export default function Experience({
                 }}
             >
                 {technologies.map((tech) => (
-                    <span
+                    <li
                         key={tech}
                         className="workSans"
                         style={{
@@ -139,9 +140,9 @@ export default function Experience({
                         }
                     >
                         {tech}
-                    </span>
+                    </li>
                 ))}
-            </div>
+            </ul>
         </div>
     );
 }

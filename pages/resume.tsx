@@ -54,18 +54,20 @@ export default function Resume() {
                     flexWrap: "wrap",
                 }}
             >
-                <h2
+                <h1
                     className="libreCaslonBold"
                     style={{
                         fontSize: "clamp(36px, 5vw, 60px)",
                         fontWeight: 700,
+                        lineHeight: 1.25,
+                        letterSpacing: "normal",
                         textAlign: "left",
                         margin: 0,
                         color: "var(--fg)",
                     }}
                 >
                     Resume
-                </h2>
+                </h1>
                 <a
                     href="/resume.pdf"
                     download

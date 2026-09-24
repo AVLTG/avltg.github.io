@@ -1,6 +1,6 @@
 import ThemeButton from "./ThemeChanger";
 import { FaAngleUp, FaBars, FaTimes } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -43,6 +43,8 @@ export function Header() {
     const isHome = router.pathname === "/";
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const headerRef = useRef<HTMLElement>(null);
+    const menuToggleRef = useRef<HTMLButtonElement>(null);
     const active = useActiveSection(SECTIONS, isHome);
 
     useEffect(() => {
@@ -51,6 +53,35 @@ export function Header() {
         window.addEventListener("scroll", onScroll, { passive: true });
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
+
+    useEffect(() => {
+        const closeMenu = () => setMenuOpen(false);
+        router.events.on("routeChangeStart", closeMenu);
+        return () => router.events.off("routeChangeStart", closeMenu);
+    }, [router.events]);
+
+    useEffect(() => {
+        if (!menuOpen) return;
+
+        const onKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                setMenuOpen(false);
+                menuToggleRef.current?.focus();
+            }
+        };
+        const onClickOutside = (event: MouseEvent) => {
+            if (!headerRef.current?.contains(event.target as Node)) {
+                setMenuOpen(false);
+            }
+        };
+
+        document.addEventListener("keydown", onKeyDown);
+        document.addEventListener("click", onClickOutside);
+        return () => {
+            document.removeEventListener("keydown", onKeyDown);
+            document.removeEventListener("click", onClickOutside);
+        };
+    }, [menuOpen]);
 
     const handleNavClick = (
         e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -63,7 +94,14 @@ export function Header() {
             if (el) {
                 const y =
                     el.getBoundingClientRect().top + window.scrollY - 72;
-                window.scrollTo({ top: y, behavior: "smooth" });
+                const reducedMotion = window.matchMedia(
+                    "(prefers-reduced-motion: reduce)",
+                ).matches;
+                window.scrollTo({
+                    top: y,
+                    behavior: reducedMotion ? "auto" : "smooth",
+                });
+                window.history.pushState(null, "", `#${id}`);
             }
         } else {
             router.push(`/#${id}`);
@@ -92,6 +130,7 @@ export function Header() {
 
     return (
         <header
+            ref={headerRef}
             style={headerStyle}
             className="px-8 md:px-24 lg:px-56 py-5 flex justify-between items-center"
         >
@@ -142,9 +181,13 @@ export function Header() {
             <div className="flex items-center gap-4">
                 <ThemeButton />
                 <button
+                    ref={menuToggleRef}
+                    type="button"
                     className="md:hidden text-2xl"
                     onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Toggle menu"
+                    aria-expanded={menuOpen}
+                    aria-controls="mobile-menu"
+                    aria-label={menuOpen ? "Close menu" : "Open menu"}
                 >
                     {menuOpen ? <FaTimes /> : <FaBars />}
                 </button>
@@ -153,6 +196,7 @@ export function Header() {
             {/* Mobile dropdown */}
             {menuOpen && (
                 <nav
+                    id="mobile-menu"
                     className="absolute top-full right-4 mt-2 p-4 z-50 md:hidden"
                     style={{
                         background: "var(--bg)",

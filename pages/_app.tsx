@@ -81,8 +81,11 @@ export default function App({ Component, pageProps }: AppProps) {
                 />
             </Head>
             <ThemeProvider>
+                <a href="#main" className="skip-link">
+                    Skip to main content
+                </a>
                 <Header />
-                <main>
+                <main id="main" tabIndex={-1}>
                     <Component {...pageProps} />
                 </main>
                 <Footer />

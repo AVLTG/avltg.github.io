@@ -55,6 +55,7 @@ export default function Hero() {
                 }}
             >
                 <span
+                    className="hero-scroll-pulse"
                     style={{
                         display: "inline-block",
                         width: 56,

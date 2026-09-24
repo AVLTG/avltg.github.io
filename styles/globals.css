@@ -65,6 +65,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 72px;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -77,6 +81,34 @@ a { color: inherit; }
 
 a, button {
   @apply duration-200 hover:text-purple;
+}
+
+:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 60;
+  padding: 8px 12px;
+  border: 1px solid var(--fg);
+  border-radius: 4px;
+  color: var(--fg);
+  background: var(--bg);
+  font-family: var(--font-sans);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 ul { list-style: none; }
@@ -99,4 +131,21 @@ h3 {
   font-family: var(--font-serif);
   font-weight: 700;
   line-height: 1.25;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero-scroll-pulse {
+    animation: none !important;
+  }
 }
