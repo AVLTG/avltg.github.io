@@ -56,6 +56,11 @@ export default function Website() {
                     rel="canonical"
                     href="https://www.avltg.dev/"
                 />
+                <meta
+                    key="og:url"
+                    property="og:url"
+                    content="https://www.avltg.dev/"
+                />
             </Head>
             <Hero />
 

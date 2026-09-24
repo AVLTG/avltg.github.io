@@ -54,11 +54,6 @@ export default function App({ Component, pageProps }: AppProps) {
                     content="Amirali Tolooei — Full-Stack & AI Developer in Toronto. Computer Science, University of Toronto."
                 />
                 <meta
-                    key="og:url"
-                    property="og:url"
-                    content="https://www.avltg.dev/"
-                />
-                <meta
                     key="twitter:card"
                     name="twitter:card"
                     content="summary"
