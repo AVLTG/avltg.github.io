@@ -42,3 +42,6 @@ next-env.d.ts
 /.claude
 PROJECT_CONTEXT.md
 /.superpowers
+
+# resume LaTeX source (local only)
+/resume-src
