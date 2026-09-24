@@ -3,6 +3,7 @@ import About from "../components/About";
 import Experience from "../components/Experience";
 import Projects from "../components/Project";
 import Contact from "../components/Contact";
+import Head from "next/head";
 import {
     ABOUT_BODY,
     ABOUT_FACTS,
@@ -49,6 +50,13 @@ function Section({
 export default function Website() {
     return (
         <>
+            <Head>
+                <link
+                    key="canonical"
+                    rel="canonical"
+                    href="https://www.avltg.dev/"
+                />
+            </Head>
             <Hero />
 
             <Section id="about" title="About Me">
