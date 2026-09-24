@@ -2,12 +2,14 @@ import { useTheme } from "next-themes";
 import { FaSun } from "react-icons/fa";
 
 const ThemeButton = () => {
-    const { theme, setTheme } = useTheme();
+    const { resolvedTheme, setTheme } = useTheme();
     return (
         <button
             aria-label="Toggle theme"
             className="text-xl md:text-2xl"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() =>
+                setTheme(resolvedTheme === "dark" ? "light" : "dark")
+            }
             style={{
                 background: "none",
                 border: "none",

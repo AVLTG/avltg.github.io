@@ -83,7 +83,7 @@ export default function Experience({
                 {summary}
             </p>
 
-            <div
+            <ul
                 className="workSans"
                 style={{
                     marginTop: 16,
@@ -93,7 +93,7 @@ export default function Experience({
                 }}
             >
                 {highlights.map((highlight, i) => (
-                    <div
+                    <li
                         key={i}
                         style={{
                             display: "flex",
@@ -106,11 +106,12 @@ export default function Experience({
                             &#8226;
                         </span>
                         <span>{highlight}</span>
-                    </div>
+                    </li>
                 ))}
-            </div>
+            </ul>
 
-            <div
+            <ul
+                aria-label="Technologies"
                 style={{
                     display: "flex",
                     flexWrap: "wrap",
@@ -119,29 +120,21 @@ export default function Experience({
                 }}
             >
                 {technologies.map((tech) => (
-                    <span
+                    <li
                         key={tech}
-                        className="workSans"
+                        className="workSans tech-tag"
                         style={{
                             fontSize: 12,
                             border: "1px solid var(--fg)",
                             borderRadius: 9999,
                             padding: "4px 12px",
-                            opacity: 0.7,
                             cursor: "default",
-                            transition: "opacity 200ms",
                         }}
-                        onMouseEnter={(e) =>
-                            (e.currentTarget.style.opacity = "1")
-                        }
-                        onMouseLeave={(e) =>
-                            (e.currentTarget.style.opacity = "0.7")
-                        }
                     >
                         {tech}
-                    </span>
+                    </li>
                 ))}
-            </div>
+            </ul>
         </div>
     );
 }

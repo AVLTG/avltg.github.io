@@ -20,8 +20,21 @@ export default {
       },
       fontFamily: {
         serif: ["Libre Caslon Text", "Georgia", "serif"],
-        sans: ["Work Sans", "system-ui", "sans-serif"],
-        wordmark: ["Cinzel", "Libre Caslon Text", "serif"],
+        sans: [
+          "Work Sans Variable",
+          "Work Sans",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+        wordmark: [
+          "Cinzel Variable",
+          "Cinzel",
+          "Libre Caslon Text",
+          "serif",
+        ],
       },
     },
   },

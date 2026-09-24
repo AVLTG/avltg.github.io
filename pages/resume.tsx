@@ -1,5 +1,6 @@
 import { FaDownload } from "react-icons/fa";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const PdfViewer = dynamic(() => import("../components/PdfViewer"), {
     ssr: false,
@@ -15,6 +16,34 @@ export default function Resume() {
                 flexDirection: "column",
             }}
         >
+            <Head>
+                <title key="title">Resume — Amirali Tolooei</title>
+                <meta
+                    key="description"
+                    name="description"
+                    content="Resume of Amirali Tolooei — Full-Stack & AI Developer in Toronto."
+                />
+                <meta
+                    key="og:title"
+                    property="og:title"
+                    content="Resume — Amirali Tolooei"
+                />
+                <meta
+                    key="og:description"
+                    property="og:description"
+                    content="Resume of Amirali Tolooei — Full-Stack & AI Developer in Toronto."
+                />
+                <meta
+                    key="og:url"
+                    property="og:url"
+                    content="https://www.avltg.dev/resume"
+                />
+                <link
+                    key="canonical"
+                    rel="canonical"
+                    href="https://www.avltg.dev/resume"
+                />
+            </Head>
             <div
                 style={{
                     display: "flex",
@@ -25,44 +54,27 @@ export default function Resume() {
                     flexWrap: "wrap",
                 }}
             >
-                <h2
+                <h1
                     className="libreCaslonBold"
                     style={{
                         fontSize: "clamp(36px, 5vw, 60px)",
                         fontWeight: 700,
+                        lineHeight: 1.25,
+                        letterSpacing: "normal",
                         textAlign: "left",
                         margin: 0,
                         color: "var(--fg)",
                     }}
                 >
                     Resume
-                </h2>
+                </h1>
                 <a
                     href="/resume.pdf"
                     download
-                    className="workSans"
+                    className="workSans pill"
                     style={{
-                        display: "inline-flex",
-                        alignItems: "center",
                         gap: 8,
-                        fontSize: 12,
-                        letterSpacing: "0.18em",
-                        textTransform: "uppercase",
-                        fontWeight: 500,
-                        border: "1px solid var(--fg)",
-                        borderRadius: 9999,
-                        padding: "10px 22px",
-                        color: "var(--fg)",
                         textDecoration: "none",
-                        transition: "color 200ms, border-color 200ms",
-                    }}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.color = "var(--purple)";
-                        e.currentTarget.style.borderColor = "var(--purple)";
-                    }}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.style.color = "var(--fg)";
-                        e.currentTarget.style.borderColor = "var(--fg)";
                     }}
                 >
                     <FaDownload style={{ fontSize: 12 }} />
