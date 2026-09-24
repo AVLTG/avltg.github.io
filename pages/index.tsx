@@ -12,6 +12,30 @@ import {
     PROJECTS,
 } from "../content/site";
 
+// schema.org Person data so search engines tie this site to the owner's
+// LinkedIn and GitHub profiles.
+const PERSON_JSON_LD = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Amirali Tolooei",
+    url: "https://www.avltg.dev/",
+    jobTitle: "Full-Stack & AI Developer",
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Toronto",
+        addressRegion: "ON",
+        addressCountry: "CA",
+    },
+    alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "University of Toronto",
+    },
+    sameAs: [
+        "https://www.linkedin.com/in/amirali-tolooei/",
+        "https://github.com/AVLTG",
+    ],
+};
+
 function Section({
     id,
     title,
@@ -60,6 +84,12 @@ export default function Website() {
                     key="og:url"
                     property="og:url"
                     content="https://www.avltg.dev/"
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(PERSON_JSON_LD),
+                    }}
                 />
             </Head>
             <Hero />
