@@ -18,6 +18,7 @@ function ProjectIndex({
     data: ProjectData;
 }) {
     const [hover, setHover] = useState(false);
+    const [hasActivated, setHasActivated] = useState(false);
     const { name, description, image, link, year, tech } = data;
 
     return (
@@ -25,8 +26,16 @@ function ProjectIndex({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={() => setHover(true)}
+            onMouseEnter={() => {
+                setHover(true);
+                setHasActivated(true);
+            }}
             onMouseLeave={() => setHover(false)}
+            onFocus={() => {
+                setHover(true);
+                setHasActivated(true);
+            }}
+            onBlur={() => setHover(false)}
             className="avltg-project-row"
             style={{
                 display: "grid",
@@ -60,16 +69,25 @@ function ProjectIndex({
                     zIndex: 2,
                 }}
             >
-                <img
-                    src={image}
-                    alt=""
-                    style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        filter: "contrast(0.85) saturate(0.9)",
-                    }}
-                />
+                {hasActivated && (
+                    // Pre-optimized static WebP previews do not need Next.js image processing.
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                        src={image}
+                        alt=""
+                        aria-hidden
+                        loading="lazy"
+                        decoding="async"
+                        width={220}
+                        height={140}
+                        style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            filter: "contrast(0.85) saturate(0.9)",
+                        }}
+                    />
+                )}
             </div>
 
             <div

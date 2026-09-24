@@ -7,7 +7,7 @@ export const PROJECTS: ProjectData[] = [
         tech: ["Python", "FastAPI", "BeautifulSoup"],
         description:
             "A deck-building companion for Magic: The Gathering players that searches friends' Moxfield collections and local game store inventories.",
-        image: "/images/tableTally.png",
+        image: "/images/tableTally.webp",
         link: "https://tabletally.avltg.dev",
     },
     {
@@ -16,7 +16,7 @@ export const PROJECTS: ProjectData[] = [
         tech: ["TypeScript", "vLLM", "QLoRA"],
         description:
             "A Discord chatbot styled as a Magic: The Gathering character, with a three-tier LLM cascade, local RAG over 10K embeddings, per-user memory, and a self-hosted QLoRA fine-tune of Llama 3.1 8B.",
-        image: "/images/squeeBot.png",
+        image: "/images/squeeBot.webp",
         link: "https://github.com/avltg/squeebot",
     },
     {
@@ -25,7 +25,7 @@ export const PROJECTS: ProjectData[] = [
         tech: ["Next.js", "TypeScript", "Drizzle"],
         description:
             "A book-sharing platform for friend groups to browse shared bookshelves, track ownership, leave ratings and reviews, and discover what each other are reading.",
-        image: "/images/friendLibrary.png",
+        image: "/images/friendLibrary.webp",
         link: "https://github.com/avltg/friend-library",
     },
     {
@@ -34,7 +34,7 @@ export const PROJECTS: ProjectData[] = [
         tech: ["Python", "pdfplumber", "React"],
         description:
             "A personal finance dashboard that ingests bank statement PDFs, tracks balances across accounts, and calculates net worth over time.",
-        image: "/images/fintrack.png",
+        image: "/images/fintrack.webp",
         link: "https://www.github.com/avltg",
     },
     {
@@ -43,7 +43,7 @@ export const PROJECTS: ProjectData[] = [
         tech: ["Unity", "C#"],
         description:
             "A single-player puzzle experience, where players are challenged to cross a series of rooms by completing puzzles that can only be solved using the Swap Mechanic.",
-        image: "/images/sizeMatters.png",
+        image: "/images/sizeMatters.webp",
         link: "https://gump0.itch.io/size-matters",
     },
     {
@@ -52,7 +52,7 @@ export const PROJECTS: ProjectData[] = [
         tech: ["TypeScript", "Chrome Ext"],
         description:
             "A Chrome extension that helps users change their YouTube recommendation algorithm, seeing more of what they want and suppressing the rest.",
-        image: "/images/connuki.jpg",
+        image: "/images/connuki.webp",
         link: "https://devpost.com/software/contentnuke",
     },
     {
@@ -61,7 +61,7 @@ export const PROJECTS: ProjectData[] = [
         tech: ["PyTorch", "NumPy"],
         description:
             "An implementation of the U-Net architecture for segmenting overlapping MNIST digits into 11 distinct classes.",
-        image: "/images/Unet.png",
+        image: "/images/Unet.webp",
         link: "https://colab.research.google.com/drive/1lOd01zhpsz5L795FKP-ZL03TexQDWAhD?usp=sharing",
     },
     {
@@ -70,7 +70,7 @@ export const PROJECTS: ProjectData[] = [
         tech: ["PyTorch", "Pandas"],
         description:
             "A fine-tuning experiment using MathBERT and BERTweet on a verbal arithmetic classification task.",
-        image: "/images/Bert.png",
+        image: "/images/Bert.webp",
         link: "https://colab.research.google.com/drive/1fFks3sL0sasPM6VV7fbjOK9ABdlKjFyt?usp=sharing",
     },
     {
@@ -79,7 +79,7 @@ export const PROJECTS: ProjectData[] = [
         tech: ["NumPy", "Python"],
         description:
             "An object-oriented implementation of the PatchMatch algorithm using only NumPy, with optimized nearest-neighbor field generation, vectorized patch comparisons, and image reconstruction (not public for academic integrity reasons).",
-        image: "/images/PatchMatch.png",
+        image: "/images/PatchMatch.webp",
         link: "https://www.github.com/avltg",
     },
 ];
