@@ -55,7 +55,6 @@ export default function Hero() {
                 }}
             >
                 <span
-                    className="hero-scroll-pulse"
                     style={{
                         display: "inline-block",
                         width: 56,
@@ -113,6 +112,7 @@ export default function Hero() {
                     Scroll
                 </span>
                 <span
+                    className="hero-scroll-pulse"
                     style={{
                         display: "inline-block",
                         width: 1,
