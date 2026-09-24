@@ -101,7 +101,9 @@ export function Header() {
                     top: y,
                     behavior: reducedMotion ? "auto" : "smooth",
                 });
-                window.history.pushState(null, "", `#${id}`);
+                // Push through the router (not history.pushState) so the
+                // entry carries Next.js state and Back restores the page.
+                router.push(`/#${id}`, undefined, { scroll: false });
             }
         } else {
             router.push(`/#${id}`);

@@ -75,8 +75,6 @@ function ProjectIndex({
                     <img
                         src={image}
                         alt=""
-                        aria-hidden
-                        loading="lazy"
                         decoding="async"
                         width={220}
                         height={140}

@@ -93,6 +93,11 @@ a, button {
   outline: none;
 }
 
+/* The skip link focuses <main>; don't outline the whole page. */
+main:focus-visible {
+  outline: none;
+}
+
 .skip-link {
   position: fixed;
   top: 12px;
